@@ -1,0 +1,25 @@
+﻿<ion-view view-title="Editar Partido">
+    <ion-content>
+        <div class="list card">
+            <div class="item item-input">
+                <span class="input-label">Equipo 1</span>
+                <input placeholder="ingrese equipo 1" type="text" ng-model="encuentros.equipoA" />
+            </div>
+            <div class="item item-input">
+                <span class="input-label">Equipo 2</span>
+                <input placeholder="ingrese equipo 2" type="text" ng-model="encuentros.equipoB" />
+            </div>           
+            <div class="item item-input">
+                <span class="input-label">Lugar de Encuentro</span>
+                <input placeholder="ingrese cancha" type="text" ng-model="encuentros.cancha" />
+            </div>           
+        </div>
+
+        <div class="padding">
+            <button class="button button-block button-positive"
+                    ng-click="save_partido()">
+                Save
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

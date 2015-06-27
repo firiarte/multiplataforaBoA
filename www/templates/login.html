@@ -1,0 +1,20 @@
+﻿<ion-view view-title="Mi Login" ng-controller="LoginCtrl">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">Usuario</span>
+                <input ng-model="user.usuario" type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Contraseña</span>
+                <input ng-model="user.contra" type="password">
+            </label>
+            <button ng-click="iniciar(user)" class="button button-full button-positive">
+                Entrar
+            </button>
+            <div>
+                {{mensaje}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,48 @@
+﻿<ion-view view-title="Lista de Partidos" ng-controller="PartidoList">
+    <ion-content>
+        <div class="padding">
+
+        </div>
+
+        <ion-refresher pulling-text="Pull to refresh..."
+                       on-refresh="cargarNuevos()">
+        </ion-refresher>
+
+        <ion-list>
+
+            <ion-item href="#/editPartido/{{partidos.encuentroID}} class="item-remove-animate item-icon-right"
+                      ng-repeat="partidos in encuentros">               
+                
+                <i class="icon ion-arrow-right-b" style="float:right"></i>
+
+                <h2>{{partidos.equipoA}} Vs {{partidos.equipoB}}</h2>
+                
+                <p>
+                    Lugar encuentro: {{partidos.cancha}}
+                </p>
+                <p>
+                    Fecha: {{partidos.fechaPlanificado}}  Hrs. {{partidos.horaInicio}}
+                </p>
+                
+                <ion-option-button class="button-assertive icon-left ion-trash-b"
+                                   ng-click="eliminarPartido(partidos.encuentroID)">Eliminar</ion-option-button>
+                
+            </ion-item>
+        </ion-list>
+
+        <!--<ion-infinite-scroll ng-if="!noMoreItemsAvailable"
+                             on-infinite="cargarAnteriores()"
+                             distance="1%">
+
+        </ion-infinite-scroll>-->
+
+
+
+    </ion-content>
+
+    <!--<div class="bar bar-footer bar-stable">
+        <a href="#/add" class="button button-assertive icon-left ion-compose">Nueva Persona</a>
+        <a href="#/map" class="button button-assertive icon-left ion-compose">mapa</a>        
+    </div>-->
+
+</ion-view>
